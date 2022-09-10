@@ -9,10 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "vite-plugin-pwa": "^0.12.7"
   },
   "dependencies": {
     "eslint-config-dev": "^3.1.0",
-    "idb": "^7.0.2"
+    "idb": "^7.0.2",
+    "workbox-precaching": "^6.5.4",
+    "workbox-recipes": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4"
   }
 }

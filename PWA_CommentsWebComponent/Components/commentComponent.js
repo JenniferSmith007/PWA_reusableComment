@@ -1,5 +1,6 @@
 import { Store } from "../lib/store";
 
+
 const store = new Store({ comments:[] });
   console.log(store);
   // create new store and want to sub to store 
