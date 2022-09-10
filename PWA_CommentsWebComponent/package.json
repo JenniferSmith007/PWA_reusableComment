@@ -12,6 +12,7 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
-    "eslint-config-dev": "^3.1.0"
+    "eslint-config-dev": "^3.1.0",
+    "idb": "^7.0.2"
   }
 }

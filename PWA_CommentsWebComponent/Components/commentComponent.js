@@ -1,4 +1,4 @@
-import { Store } from "./store";
+import { Store } from "../lib/store";
 
 const store = new Store({ comments:[] });
   console.log(store);
@@ -90,14 +90,19 @@ class CommentComponent extends HTMLElement {
       let name = document.getElementById("name").value
       let email = document.getElementById("email").value
       let comment = document.getElementById("comment").value
+      let commentObject = {
+        name: `${name}`,
+        email: `${email}`,
+        comment: `${comment}`,
   
-      commentDisplay.setAttribute("name", name)
-      commentDisplay.setAttribute("email", email)
-      commentDisplay.setAttribute("comment", comment)
-      // document.body.appendChild(commentDisplay)
+      }
+      commentDisplay.setAttribute("name", commentObject.name)
+      commentDisplay.setAttribute("email", commentObject.email)
+      commentDisplay.setAttribute("comment", commentObject.comment)
+      document.body.appendChild(commentDisplay)
       
-      store.addComment(store.state, commentDisplay);
-    
+      store.addComment(store.state, commentObject);
+      store.db.add("comments", commentObject)
     
      
     });
