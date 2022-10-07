@@ -1,7 +1,7 @@
 const header = () => {
     let headerHolder = document.createElement("header")
   let headerImg = document.createElement("img")  
-  headerImg.src = "/images/header.svg"
+  headerImg.src = "/header.svg"
   headerImg.style.width = "100vw"
   headerHolder.appendChild(headerImg)
   document.body.appendChild(headerHolder)
