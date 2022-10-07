@@ -1,35 +1,32 @@
-const firstHeader = () => {
-let header = document.createElement("header")
-console.log('this is header', header)
-document.body.appendChild(header)
-header.style.backgroundColor = "#6C2C67"
-header.style.color = "white"
-let headerLogo = document.createElement("p")
-let headerWorn = document.createElement("p")
-let headerPro = document.createElement("p")
-let headerShip = document.createElement("p")
-let headerLoc = document.createElement('p')
-headerLogo.innerText = "Patagonia"
-headerWorn.innerText = " Worn Wear"
-headerPro.innerText = "Provisions"
-headerShip.innerText = "Free shipping on orders over $90.00"
-headerLoc.innerText = "Patagonia, Meatpacking NYC"
-header.appendChild(headerLogo)
-header.appendChild(headerWorn)
-header.appendChild(headerPro)
-header.appendChild(headerShip)
-header.appendChild(headerLoc)
-document.body.appendChild(header)
-}
-const primHeader = () => {
-
+const header = () => {
+    let headerHolder = document.createElement("header")
+  let headerImg = document.createElement("img")  
+  headerImg.src = "/images/header.svg"
+  headerImg.style.width = "100vw"
+  headerHolder.appendChild(headerImg)
+  document.body.appendChild(headerHolder)
 }
 
 const image = () => {
+    let imgHolder = document.createElement("div")
+    imgHolder.id ="holder"
     let img = document.createElement("img")
-    img.src = "/images/main.svg"
-    document.body.appendChild(img)
+    let imgText = document.createElement("p")
+    imgText.innerText = "Product image color may not be shown in color purchased."
+    img.src = "/images/patmerch.jpeg"
+    img.style.width = "50vw"
+    imgHolder.appendChild(img)
+    imgHolder.appendChild(imgText)
+    document.body.appendChild(imgHolder)
 }
+
+
+
+
+
+
+
+
 const form = () => {
 let form = document.createElement("form")
 form.setAttribute("id", "form")
@@ -37,13 +34,13 @@ form.setAttribute("id", "form")
 let nameInput = document.createElement("INPUT");
 nameInput.setAttribute("type", "text");
 nameInput.setAttribute("name", "name");
-nameInput.setAttribute("placeholder", "name");
+nameInput.setAttribute("placeholder", "First Name *");
 nameInput.setAttribute("id", "name");
 nameInput.required = true;
 // email setting up 
 let emailInput = document.createElement("INPUT");
 emailInput.setAttribute("type", "email");
-emailInput.setAttribute("placeholder", "email");
+emailInput.setAttribute("placeholder", "Email *");
 emailInput.setAttribute("id", "email");
 emailInput.required = true;
 // comment setting up 
@@ -53,31 +50,21 @@ commentInput.setAttribute("id", "comment");
 commentInput.setAttribute("cols", "60");
 commentInput.setAttribute("rows", "8");
 commentInput.setAttribute("placeholder", "Write a detailed review here. Tell us and other customers what’s working for you and what isn’t.*");
-// setting up checkbox 
-let label = document.createElement("p");
-label.textContent = 'By checking this box your review will be posted public.';
-label.setAttribute("for", "post")
-let checkbox = document.createElement("INPUT");
-checkbox.setAttribute("type", "checkbox");
-checkbox.setAttribute("id", "post");
-// setting up submit button 
+
 let button = document.createElement("button");
 button.setAttribute("type", "submit");
-button.textContent="submit"
+button.textContent="Submit Your Review"
 form.appendChild(nameInput)
 form.appendChild(emailInput)
 form.appendChild(commentInput)
-form.appendChild(label)
-form.appendChild(checkbox)
+
 form.appendChild(button)
 document.body.appendChild(form)
 }
 
 
 
-
-firstHeader()
-primHeader()
+header()
 image()
 form()
 

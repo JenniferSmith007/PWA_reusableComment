@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+header{
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start;
+}
+#holder{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+   color: rgb(160, 160, 160);
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+   gap: 1.5em
+}
+#name, #email{
+    align-self: center;
+    border: none; 
+    border-bottom: .2em solid ;
+    width: 30em;
+    height: 3em;
+    
+}
+
+#comment{
+    align-self: center; 
+    border-radius: 1em;
+    border: 1.5px solid black;
+    text-align: center;
+}
+button{
+    align-self: center; 
+    background-color: black;
+    color: white;
+    width: 20em;
+    height: 3.5em;
+    border-radius: 10em;
+    font-size: .9em;
+} 
+.com{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 9px;
+    grid-row-gap: 7px;
+}
