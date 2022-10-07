@@ -83,7 +83,7 @@ class CommentComponent extends HTMLElement {
   document.addEventListener("DOMContentLoaded", () => {
     const btn = document.querySelector("button");
     console.log(btn)
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", async(e) => {
       e.preventDefault();
   
       let commentDisplay = document.createElement('comment-component')
@@ -103,9 +103,28 @@ class CommentComponent extends HTMLElement {
       
       store.addComment(store.state, commentObject);
       store.db.add("comments", commentObject)
-    
+      // await store.db.put("comments", commentObject);
+      
+      let showB = document.createElement("button")
+      console.log('this is showb', showB)
+      document.body.appendChild(showB)
+      showB.innerHTML = "previous comments"
+      showB.addEventListener("click", async(e) => {
+        console.log('this is button')
+        const value = await store.db.getAll("comments");
+       console.log(value)
+       value.forEach(comment => {
+        console.log('this is comment', comment)
+        let commName = comment.name
+        console.log('this is name', commName)
+        let nodename = document.createTextNode(commName)
+        document.body.appendChild(nodename)
+      })
+      })
+      
      
     });
+   
   });
   
   // export default CommentComponent

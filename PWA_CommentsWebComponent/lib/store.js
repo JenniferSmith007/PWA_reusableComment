@@ -11,6 +11,7 @@ export class Store {
         for(const[key,value] of Objects.entries(comment))
         this.set[key,value]
       }
+     
  
     })
 
