@@ -1,7 +1,7 @@
 const header = () => {
     let headerHolder = document.createElement("header")
   let headerImg = document.createElement("img")  
-  headerImg.src = "header.svg"
+  headerImg.src = "/header.svg"
   headerImg.style.width = "100vw"
   headerHolder.appendChild(headerImg)
   document.body.appendChild(headerHolder)
@@ -13,7 +13,7 @@ const image = () => {
     let img = document.createElement("img")
     let imgText = document.createElement("p")
     imgText.innerText = "Product image color may not be shown in color purchased."
-    img.src = "patmerch.jpeg"
+    img.src = "/patmerch.jpeg"
     img.style.width = "50vw"
     imgHolder.appendChild(img)
     imgHolder.appendChild(imgText)
