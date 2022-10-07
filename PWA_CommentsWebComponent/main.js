@@ -1,7 +1,7 @@
 import './style.css'
-import formDomSetup from './Components/formDomSetup'
-import commentComponent from './Components/commentComponent'
 
+import commentComponent from './Components/commentComponent'
+import style from './Components/style'
 
 
 
