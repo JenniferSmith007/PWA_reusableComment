@@ -52,7 +52,7 @@ class CommentComponent extends HTMLElement {
     connectedCallback() {
       // will be claaed fist time DOM is loaded
       this.innerHTML = `
-     
+     <h4> Most Recent Comment from, ${this.name}.</h4>
       <p> Name:  ${this.name} </p>
       <p> email: ${this.email} </p> 
       <p> comment: ${this.comment} </p>
@@ -91,6 +91,7 @@ class CommentComponent extends HTMLElement {
   
       let commentDisplay = document.createElement('comment-component')
       
+      
       let name = document.getElementById("name").value
       let email = document.getElementById("email").value
       let comment = document.getElementById("comment").value
@@ -100,9 +101,11 @@ class CommentComponent extends HTMLElement {
         comment: `${comment}`,
   
       }
+      
       commentDisplay.setAttribute("name", commentObject.name)
       commentDisplay.setAttribute("email", commentObject.email)
       commentDisplay.setAttribute("comment", commentObject.comment)
+      
       document.body.appendChild(commentDisplay)
       
       store.addComment(store.state, commentObject);
