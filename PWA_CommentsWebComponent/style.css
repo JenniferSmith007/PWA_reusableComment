@@ -49,10 +49,9 @@ button{
     border-radius: 10em;
     font-size: .9em;
 } 
-.com{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 9px;
-    grid-row-gap: 7px;
+#holdcom{
+    
+ 
+
+    
 }

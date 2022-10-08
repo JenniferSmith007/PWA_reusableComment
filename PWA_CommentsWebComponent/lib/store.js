@@ -15,13 +15,16 @@ export class Store {
       subHead.innerText = "Previous Comments"
       subHead.id = "sub"
       document.body.appendChild(subHead)
+      let prevHolder = document.createElement("div")
+      prevHolder.id = "holdcom"
+      document.body.appendChild(prevHolder)
      const value = await db.getAll("comments");
       console.log(value)
       value.forEach(comment => {
-       let prevHolder = document.createElement("div")
-      
+
       let commName = comment.name
       let nodename = document.createTextNode(commName)
+      
       let commEmail = comment.email
       let nodeemail = document.createTextNode(commEmail)
       let commComm = comment.comment
@@ -29,7 +32,9 @@ export class Store {
       prevHolder.appendChild(nodename)
       prevHolder.appendChild(nodeemail)
       prevHolder.appendChild(nodecomment)
-       document.body.appendChild(prevHolder)
+
+     
+       
       })
  
     })
