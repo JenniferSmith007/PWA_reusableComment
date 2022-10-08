@@ -11,7 +11,26 @@ export class Store {
         for(const[key,value] of Objects.entries(comment))
         this.set[key,value]
       }
-     
+      let subHead = document.createElement("p")
+      subHead.innerText = "Previous Comments"
+      subHead.id = "sub"
+      document.body.appendChild(subHead)
+     const value = await db.getAll("comments");
+      console.log(value)
+      value.forEach(comment => {
+       let prevHolder = document.createElement("div")
+      
+      let commName = comment.name
+      let nodename = document.createTextNode(commName)
+      let commEmail = comment.email
+      let nodeemail = document.createTextNode(commEmail)
+      let commComm = comment.comment
+      let nodecomment = document.createTextNode(commComm)
+      prevHolder.appendChild(nodename)
+      prevHolder.appendChild(nodeemail)
+      prevHolder.appendChild(nodecomment)
+       document.body.appendChild(prevHolder)
+      })
  
     })
 

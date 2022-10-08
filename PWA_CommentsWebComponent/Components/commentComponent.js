@@ -52,7 +52,7 @@ class CommentComponent extends HTMLElement {
     connectedCallback() {
       // will be claaed fist time DOM is loaded
       this.innerHTML = `
-      
+     
       <p> Name:  ${this.name} </p>
       <p> email: ${this.email} </p> 
       <p> comment: ${this.comment} </p>
@@ -83,6 +83,7 @@ class CommentComponent extends HTMLElement {
   
   
   document.addEventListener("DOMContentLoaded", () => {
+   
     const btn = document.querySelector("button");
     console.log(btn)
     btn.addEventListener("click", async(e) => {
@@ -108,26 +109,22 @@ class CommentComponent extends HTMLElement {
       store.db.add("comments", commentObject)
       // await store.db.put("comments", commentObject);
       
-      let showB = document.createElement("button")
-      console.log('this is showb', showB)
-      document.body.appendChild(showB)
-      showB.innerHTML = "previous comments"
-      showB.addEventListener("click", async(e) => {
-        console.log('this is button')
-        const value = await store.db.getAll("comments");
-       console.log(value)
-       value.forEach(comment => {
-        console.log('this is comment', comment)
-        let commName = comment.name
-        console.log('this is name', commName)
-        let nodename = document.createTextNode(commName)
-        document.body.appendChild(nodename)
-      })
-      })
+      
+   
+    
+    
+     
+      
+       
+    
+     
       
      
     });
-   
+    
+      
+  
+
   });
   
   // export default CommentComponent

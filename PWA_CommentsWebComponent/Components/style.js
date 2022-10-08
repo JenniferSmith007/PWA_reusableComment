@@ -1,3 +1,5 @@
+
+
 const header = () => {
     let headerHolder = document.createElement("header")
   let headerImg = document.createElement("img")  
@@ -64,9 +66,11 @@ document.body.appendChild(form)
 
 
 
+
 header()
 image()
 form()
+
 
 
 
