@@ -14,7 +14,7 @@ const image = () => {
     let imgText = document.createElement("p")
     imgText.innerText = "Product image color may not be shown in color purchased."
     img.src = "/patmerch.jpeg"
-    img.style.width = "50em"
+    img.style.width = "50vw"
     imgHolder.appendChild(img)
     imgHolder.appendChild(imgText)
     document.body.appendChild(imgHolder)
