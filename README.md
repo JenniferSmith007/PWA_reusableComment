@@ -1,4 +1,4 @@
-# 📶 PWA Reusable Web Component:Commenting System 💻
+# 📶 PWA Reusable Commenting System 💻
 
 ### ✔️ Task To Complete: 
 
