@@ -13,7 +13,14 @@
        - When the page is loaded, it should load the comments from the IndexedDB database and display them
    - Use JavaScript module syntax (ES Modules)
 
-### Preview of Web application 
-
+### 📷 Preview of Web application 
+#### Full Page 
 ![Screenshot](https://github.com/JenniferSmith007/PWA_reusableComment/blob/IndexDB/PWA_CommentsWebComponent/images/Full.png)
-
+#### Comments
+![Screenshot](https://github.com/JenniferSmith007/PWA_reusableComment/blob/IndexDB/PWA_CommentsWebComponent/images/comment.png)
+#### Database 
+![Screenshot](https://github.com/JenniferSmith007/PWA_reusableComment/blob/IndexDB/PWA_CommentsWebComponent/images/dtabase.png)
+#### Progressive Web Application 
+![Screenshot](https://github.com/JenniferSmith007/PWA_reusableComment/blob/IndexDB/PWA_CommentsWebComponent/images/pwa.png)
+#### Application offline 
+![Screenshot](https://github.com/JenniferSmith007/PWA_reusableComment/blob/IndexDB/PWA_CommentsWebComponent/images/offline.png)
