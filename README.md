@@ -12,3 +12,8 @@
       - When a comment is valid and is submitted, it should be saved to the IndexedDB database
        - When the page is loaded, it should load the comments from the IndexedDB database and display them
    - Use JavaScript module syntax (ES Modules)
+
+### Preview of Web application 
+
+
+
