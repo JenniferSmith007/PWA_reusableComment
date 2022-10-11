@@ -15,5 +15,5 @@
 
 ### Preview of Web application 
 
-![Screenshot](Full.png)
+![Screenshot](https://github.com/JenniferSmith007/PWA_reusableComment/blob/IndexDB/PWA_CommentsWebComponent/images/Full.png)
 
